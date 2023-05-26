@@ -15,6 +15,7 @@ public class JavaCards {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("I did not know what to do with that page");
     }
     
 }

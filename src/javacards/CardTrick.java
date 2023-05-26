@@ -21,8 +21,8 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            int randomValue = (int)(Math.random()*13+1);
-            int randomSuit= (int)(Math.random()*3+1);
+            int randomValue = (int)(Math.random()*12+1);
+            int randomSuit= (int)(Math.random()*2+1);
             c.setValue(randomValue);
             c.setSuit(Card.SUITS[randomSuit]);
             magicHand[i] = c;
