@@ -6,7 +6,7 @@ package javacards;
 
 /**
  *
- * @author joede
+ * @author Adison Dickans Macwan
  */
 public class JavaCards {
 
