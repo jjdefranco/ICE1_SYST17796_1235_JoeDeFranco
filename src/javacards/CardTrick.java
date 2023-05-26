@@ -24,34 +24,27 @@ public class CardTrick {
         for (int i = 0; i < magicHand.length; i++)
         {
             Card c = new Card();
-            c.setValue(random.nextInt(13) + 1); // Generates a random value between 1 and 13
-            c.setSuit(Card.SUITS[random.nextInt(4)]); // Generates a random index between 0 and 3 to select a suit
+            c.setValue(random.nextInt(13) + 1); 
+            c.setSuit(Card.SUITS[random.nextInt(4)]); 
             magicHand[i] = c;
         }
         
-        System.out.print("Enter the value of the card (1-13): ");
-        int userValue = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
-        
-        System.out.print("Enter the suit of the card (Hearts, Diamonds, Clubs, Spades): ");
-        String userSuit = scanner.nextLine();
-        
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(userSuit);
+        Card luckyCard = new Card();
+        luckyCard.setValue(5); // Set the value of the lucky card
+        luckyCard.setSuit(Card.SUITS[3]); // Set the suit of the lucky card
         
         boolean found = false;
         for (Card card : magicHand) {
-            if (card.equals(userCard)) {
+            if (card.equals(luckyCard)) {
                 found = true;
                 break;
             }
         }
         
         if (found) {
-            System.out.println("The magic hand contains your card!");
+            System.out.println("Congratulations! You have the lucky card!");
         } else {
-            System.out.println("The magic hand does not contain your card.");
+            System.out.println("Sorry, you do not have the lucky card.");
         }
     }
 }
