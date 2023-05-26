@@ -12,7 +12,6 @@ import java.util.*;
  * @author dancye
  */
 public class CardTrick {
-    private String luckyCard = "Spade 5";
     
     public static void main(String[] args)
     {
@@ -27,20 +26,16 @@ public class CardTrick {
         }
 
         // Ask the user for card value and suit
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the card value (1-13): ");
-        int userValue = scanner.nextInt();
-        System.out.print("Enter the card suit (0-3): ");
-        int userSuit = scanner.nextInt();
+      
 
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(Card.SUITS[userSuit]);
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("Spade");
 
         // Search magicHand for the user's card
         boolean cardInMagicHand = false;
         for (Card card : magicHand) {
-            if (card.getValue() == userCard.getValue() && card.getSuit().equals(userCard.getSuit())) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) {
                 cardInMagicHand = true;
                 break;
             }
