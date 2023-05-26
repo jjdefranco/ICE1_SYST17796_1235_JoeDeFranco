@@ -24,27 +24,17 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        // Create the user's card
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter card value (1-13): ");
-        int value = scanner.nextInt() - 1; // -1 because the random number generated is between 0 and 12
-        System.out.print("Enter card suit (Hearts, Diamonds, Clubs, Spades): ");
-        String suit = scanner.next();
-        
-        
+        // Created lucky card     
         Card luckyCard = new Card();
         luckyCard.setValue(1);
         luckyCard.setSuit("Spade");   
      
      
-        Card userCard = new Card();
-        userCard.setValue(value);
-        userCard.setSuit(suit);
 
         // Search magicHand for the user's card
         boolean found = false;
         for (Card magicHand1 : magicHand) {
-            if (magicHand1.equals(userCard)) {
+            if (magicHand1.equals(luckyCard)) {
                 found = true;
                 break;
             }
