@@ -71,3 +71,4 @@ public class CardTrick {
         magicHand.pickCard();
     }
 }
+// Sorry for wrong code the messy code. I did it in a hurry
