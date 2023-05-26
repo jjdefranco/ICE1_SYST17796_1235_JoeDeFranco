@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javacards;
 
- import java.util.Random;
- import java.util.Scanner;
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -17,32 +12,25 @@ package javacards;
  * Student Number: 991708713
  * Date Modified: 2023-05-25
  * 
- * @author dancye
+ * author: dancye
  */
 
 public class CardTrick {
     
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Card[] magicHand = new Card[7];
         
-        for (int i=0; i<magicHand.length; i++)
-        {
+        for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             
             Random random = new Random();
-            
-           int cardValue = random.nextInt(13) + 1; 
-           
+            int cardValue = random.nextInt(13) + 1; 
             int suitIndex = random.nextInt(4);
 
-             c.setValue(cardValue);
-             
+            c.setValue(cardValue);
             c.setSuit(Card.SUITS[suitIndex]);
             
             magicHand[i] = c;
-            
-          
         }
         
         Scanner scanner = new Scanner(System.in);
@@ -65,17 +53,14 @@ public class CardTrick {
             }
         }
         
-        // Report the result
+        // Report the result for the user's card
         if (foundMatch) {
             System.out.println("Congratulations! Your card is in the magic hand.");
         } else {
             System.out.println("Sorry, your card is not in the magic hand.");
+        }
         
-    }
-      
-    }
-}
-// Creating a lucky card
+        // Creating a lucky card
         Card luckyCard = new Card();
         luckyCard.setValue(10);
         luckyCard.setSuit("Diamonds");
