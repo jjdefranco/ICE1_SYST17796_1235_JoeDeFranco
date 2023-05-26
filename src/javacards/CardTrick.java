@@ -42,8 +42,7 @@ public class CardTrick {
             
             magicHand[i] = c;
             
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+          
         }
         
         Scanner scanner = new Scanner(System.in);
@@ -71,10 +70,30 @@ public class CardTrick {
             System.out.println("Congratulations! Your card is in the magic hand.");
         } else {
             System.out.println("Sorry, your card is not in the magic hand.");
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        
     }
       
+    }
+}
+// Creating a lucky card
+        Card luckyCard = new Card();
+        luckyCard.setValue(10);
+        luckyCard.setSuit("Diamonds");
+        
+        // Search for the lucky card in magicHand
+        boolean foundLuckyCard = false;
+        for (Card card : magicHand) {
+            if (card.equals(luckyCard)) {
+                foundLuckyCard = true;
+                break;
+            }
+        }
+
+        // Report the result for the lucky card
+        if (foundLuckyCard) {
+            System.out.println("Congratulations! The lucky card is in the magic hand.");
+        } else {
+            System.out.println("Sorry, the lucky card is not in the magic hand.");
+        }
     }
 }
