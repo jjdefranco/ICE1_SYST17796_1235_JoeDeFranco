@@ -1,32 +1,70 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package javacards;
+// Student ID: 191709389
+import java.util.Random;
+import java.util.Scanner;
 
-/**
- * A class that fills a magic hand of 7 cards with random Card Objects
- * and then asks the user to pick a card and searches the array of cards
- * for the match to the user's card. To be used as starting code in ICE 1
- * @author dancye
- */
 public class CardTrick {
+    private Card[] magicHand;
     
-    public static void main(String[] args)
-    {
-        Card[] magicHand = new Card[7];
+    public MagicHand() {
+        magicHand = new Card[7];
+        fillMagicHand();
+    }
+    /**
+ * This is a public class that represents a coin.
+ *
+ * @modifier OsmanGoniOpi
+ */
+
+
+    
+    private void fillMagicHand() {
+        String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
+        String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+        Random random = new Random();
         
-        for (int i=0; i<magicHand.length; i++)
-        {
-            Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+        for (int i = 0; i < magicHand.length; i++) {
+            int suitIndex = random.nextInt(suits.length);
+            int rankIndex = random.nextInt(ranks.length);
+            String suit = suits[suitIndex];
+            String rank = ranks[rankIndex];
+            
+            Card card = new Card(rank, suit);
+            magicHand[i] = card;
         }
-        
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
     }
     
+    public void pickCard() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Pick a card (rank suit): ");
+        String input = scanner.nextLine();
+        
+        String[] inputParts = input.split(" ");
+        if (inputParts.length != 2) {
+            System.out.println("Invalid input. Please provide a valid rank and suit.");
+            return;
+        }
+        
+        String rank = inputParts[0];
+        String suit = inputParts[1];
+        Card userCard = new Card(rank, suit);
+        
+        boolean found = false;
+        for (Card card : magicHand) {
+            if (card.equals(userCard)) {
+                found = true;
+                break;
+            }
+        }
+        
+        if (found) {
+            System.out.println("Congratulations! Your card is in the magic hand.");
+        } else {
+            System.out.println("Sorry, your card is not in the magic hand.");
+        }
+    }
+    
+    public static void main(String[] args) {
+        MagicHand magicHand = new MagicHand();
+        magicHand.pickCard();
+    }
 }
