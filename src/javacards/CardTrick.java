@@ -33,10 +33,13 @@ public class CardTrick {
         }
     }
     
-    public void pickCard() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Pick a card (rank suit): ");
-        String input = scanner.nextLine();
+   Card luckyCard = new Card();
+        luckyCard.setValue(10); // Example: Set the lucky card value to 10
+        luckyCard.setSuit("Hearts"); // Example: Set the lucky card suit to Hearts
+
+        boolean foundUserCard = false;
+        boolean foundLuckyCard = false;
+        
         
         String[] inputParts = input.split(" ");
         if (inputParts.length != 2) {
