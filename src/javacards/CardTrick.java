@@ -12,6 +12,7 @@ import java.util.*;
  * @author dancye
  */
 public class CardTrick {
+    private String luckyCard = "Spade 5";
     
     public static void main(String[] args)
     {
