@@ -70,7 +70,7 @@ public class CardTrick {
         else {
             
             System.out.println("Sorry, you neither find your card nor the lucky card.");
-            
+          
         }
     }
 
