@@ -16,7 +16,9 @@ package javacards;
 import java.util.*;
 
 public class CardTrick {
-    
+   
+  private String luckyCard = "Hearts 7";
+
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
