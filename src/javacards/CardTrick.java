@@ -28,7 +28,11 @@ public class CardTrick {
         userCard.setValue(7);
         userCard.setSuit(Card.SUITS[2]);
         boolean isCardFound = false;
-
+        
+        Card hardcodedLuckyCard = new Card();
+        hardcodedLuckyCard.setValue(7); 
+        hardcodedLuckyCard.setSuit("Diamonds");
+        
         for (int i = 0; i < magicDeck.length; i++) {
             if (userCard.getSuit().equals(magicDeck[i].getSuit()) && magicDeck[i].getValue() == userCard.getValue()) {
                 isCardFound = true;
