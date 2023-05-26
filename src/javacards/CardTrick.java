@@ -17,13 +17,13 @@ import java.util.*;
 
 public class CardTrick {
    
-  private String luckyCard = "Hearts 7";
+  
 
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
         Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
+        
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -35,19 +35,16 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        System.out.print("Enter your card number (1-13): ");
-        int userValue = scanner.nextInt();
-        System.out.print("Enter your card suit (Hearts, Diamonds, Spades, Clubs): ");
-        String suit = scanner.next();
         
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(suit);
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Hearts");
         // and search magicHand here
         boolean found = false;
         for (int i = 0; i < magicHand.length; i++) {
             Card card = magicHand[i];
-            if (card.getValue() == userCard.getValue() && card.getSuit().equals(userCard.getSuit())) 
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) 
             {
             found = true;
             break;
@@ -55,9 +52,9 @@ public class CardTrick {
         }
         //Then report the result here
         if (found) {
-            System.out.println("Your card is in the magic hand of random cards!");
+            System.out.println("Your luckycard is in the magic hand of random cards!");
         } else {
-            System.out.println("Your card is not in the magic hand of random cards.");
+            System.out.println("Your luckycard is not in the magic hand of random cards.");
         }
     
        }
