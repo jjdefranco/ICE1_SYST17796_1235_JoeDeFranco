@@ -4,8 +4,7 @@ import java.util.*;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
- * and then asks the user to pick a card and searches the array of cards
- * for the match to the user's card. To be used as starting code in ICE 1
+ * and then it search the randomly generated array of 7 cards for the hard-coded lucky card. To be used as starting code in ICE 1
  * @author Yuvam Meelu 
  * Student ID= 991699198
  */
@@ -15,7 +14,7 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
+        
         
         for (int i = 0; i < magicHand.length; i++)
         {
@@ -24,30 +23,28 @@ public class CardTrick {
             c.setSuit(Card.SUITS[random.nextInt(4)]); // Generates a random index between 0 and 3 to select a suit
             magicHand[i] = c;
         }
+
+        int LuckyValue = 7;
         
-        System.out.print("Enter the value of the card (1-13): ");
-        int userValue = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
+
+        String LuckySuit = "Spades";
         
-        System.out.print("Enter the suit of the card (Hearts, Diamonds, Clubs, Spades): ");
-        String userSuit = scanner.nextLine();
-        
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(userSuit);
+                Card LuckyCard = new Card();
+        LuckyCard.setValue(LuckyValue);
+        LuckyCard.setSuit(LuckySuit);
         
         boolean found = false;
         for (Card card : magicHand) {
-            if (card.equals(userCard)) {
+            if (card.equals(LuckyCard)) {
                 found = true;
                 break;
             }
         }
         
         if (found) {
-            System.out.println("The magic hand contains your card!");
+            System.out.println("The magic hand contains your Lucky card!");
         } else {
-            System.out.println("The magic hand does not contain your card.");
+            System.out.println("The magic hand does not contain your Lucky card.");
  }
 }
 }
