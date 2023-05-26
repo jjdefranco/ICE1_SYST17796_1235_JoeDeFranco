@@ -16,6 +16,7 @@ package javacards;
  */
 public class Card {
 
+    //just a line
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
 
