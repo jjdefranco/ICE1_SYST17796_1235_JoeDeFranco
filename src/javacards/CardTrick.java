@@ -31,7 +31,7 @@ public class CardTrick {
         }
         Card luckyCard=new Card();
         luckyCard.setValue(1);
-        luckyCard.setSuit(2);
+        luckyCard.setSuit("Spade");
      
         System.out.print("pick any card \n Enter the suit of your desired card: ");
         String usersuit = input.next();
