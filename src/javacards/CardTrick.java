@@ -29,7 +29,7 @@ public class CardTrick {
             c.setSuit(Card.SUITS[random.nextInt(4)]);
             magicHand[i] = c;
         }
-        Card luckyCard=new luckyCard();
+        Card luckyCard=new Card();
         luckyCard.setValue(1);
         luckyCard.setSuit(2);
      
