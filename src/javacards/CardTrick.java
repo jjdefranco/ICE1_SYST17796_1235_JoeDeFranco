@@ -29,7 +29,10 @@ public class CardTrick {
             c.setSuit(Card.SUITS[random.nextInt(4)]);
             magicHand[i] = c;
         }
-
+        Card luckyCard=new luckyCard();
+        c.setValue(1);
+        c.setSuit(2);
+     
         System.out.print("pick any card \n Enter the suit of your desired card: ");
         String usersuit = input.next();
         System.out.print("\n Enter the card number: ");
@@ -47,10 +50,7 @@ public class CardTrick {
         } else {
             System.out.println("Sorry, you lose. Better luck next time");
         }
-
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+     
     }
 
 }
