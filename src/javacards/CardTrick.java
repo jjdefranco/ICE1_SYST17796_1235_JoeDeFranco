@@ -30,8 +30,8 @@ public class CardTrick {
             magicHand[i] = c;
         }
         Card luckyCard=new luckyCard();
-        c.setValue(1);
-        c.setSuit(2);
+        luckyCard.setValue(1);
+        luckyCard.setSuit(2);
      
         System.out.print("pick any card \n Enter the suit of your desired card: ");
         String usersuit = input.next();
