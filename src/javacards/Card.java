@@ -14,6 +14,12 @@ package javacards;
  * add your name as a modifier.
  * @author dancye
  */
+
+/*
+ * Modifier: Mihir Intwala
+ * Student Number: 991662200
+ */
+
 public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
