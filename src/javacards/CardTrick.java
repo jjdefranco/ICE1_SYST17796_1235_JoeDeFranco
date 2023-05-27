@@ -29,9 +29,6 @@ public class CardTrick {
             c.setSuit(Card.SUITS[random.nextInt(4)]);
             magicHand[i] = c;
         }
-        Card luckyCard=new Card();
-        luckyCard.setValue(1);
-        luckyCard.setSuit("Spade");
      
         System.out.print("pick any card \n Enter the suit of your desired card: ");
         String usersuit = input.next();
