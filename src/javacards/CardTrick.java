@@ -29,15 +29,13 @@ public class CardTrick {
             c.setSuit(Card.SUITS[random.nextInt(4)]);
             magicHand[i] = c;
         }
-     
-        System.out.print("pick any card \n Enter the suit of your desired card: ");
-        String usersuit = input.next();
-        System.out.print("\n Enter the card number: ");
-        int uservalue = input.nextInt();
+        Card luckyCard=new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Spade");
 
         boolean found = false;
         for (int i = 0; i < magicHand.length; i++) {
-            if ((magicHand[i].getSuit().equalsIgnoreCase(usersuit) && magicHand[i].getValue() == uservalue)) {
+            if ((magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit()) && magicHand[i].getValue()==luckyCard.getValue())) {
                 found = true;
                 break;
             }
