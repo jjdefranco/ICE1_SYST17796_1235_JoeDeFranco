@@ -40,13 +40,21 @@ public class CardTrick {
         }
 
         //System.out.print(magicHand[0].getValue());
+        String matchCheck = "N";
         for (int i =0; i< magicHand.length; i++){
             if (magicHand[i].getSuit().equalsIgnoreCase(userSuit)){
                 if(magicHand[i].getValue() == userValue){
                     System.out.println("Succesful, card matched");
+                    matchCheck = "N";
                     break;
                 }
             }
         }
+        
+        if (matchCheck == "N"){
+            System.out.println("Did not match");
+        }
     }
+    
+  
 }
