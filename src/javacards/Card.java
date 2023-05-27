@@ -13,8 +13,16 @@ package javacards;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
- * Modifier = Hasan_Master
  */
+
+/*Modifier name and student id for ICE-1
+
+First Name : Hasan
+Last Name : Master
+
+Student Id : 991698598
+
+*/
 public class Card {
 
     //just a line
