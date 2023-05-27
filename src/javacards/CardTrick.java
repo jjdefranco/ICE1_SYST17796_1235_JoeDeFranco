@@ -75,7 +75,7 @@ public class CardTrick {
         if (matchCheck == "N"){
             System.out.println("OOPS, You lost"); // Losing Message. // Only works when the card by user is not included in the magicHand Array
         }
-    }
-    
-  
+    } 
 }
+
+//Code Ends, WIll push this to final branch
