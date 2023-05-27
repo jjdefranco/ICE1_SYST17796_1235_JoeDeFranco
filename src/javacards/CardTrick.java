@@ -3,6 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+//MODIFIER NAME - PRANJAL CHAUHAN
+//STUDENT ID - 991705179
+//DATE MODIFIED - 26th MAY 2023
+
 package javacards;
 import java.util.Scanner;
 
