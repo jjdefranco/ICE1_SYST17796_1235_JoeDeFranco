@@ -37,8 +37,8 @@ public class CardTrick {
 //         System.out.println("Enter the Suit: ");
 //         String suit=input.next();
             Card luckyCard=new Card();
-            c2.setValue("Hearts");
-            c2.setSuit(1);
+            luckyCard.setValue(1);
+            luckyCard.setSuit("Hearts");
         
         //Checking if the card matched the random Card object or not..
         String checkThis="N";
