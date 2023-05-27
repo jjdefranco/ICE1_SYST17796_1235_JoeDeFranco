@@ -30,17 +30,31 @@ public class CardTrick {
             magicHand[i].setSuit(Card.SUITS[randomSuit]);
          
         }
+        
         System.out.println("Please input a card number:");
         userCard = input.nextInt();
         input.nextLine();
         System.out.println("Please input a card suit:");
         userSuit = input.nextLine();
         
+        // Hard-coded lucky card
+        Card luckyCard = new Card();
+        luckyCard.setValue(4);
+        luckyCard.setSuit("Spades");
+        boolean cardFound = false;
+        
+        for (Card card : magicHand) {
+            if (card.equals(luckyCard)) {
+                cardFound = true;
+                break;
+            }
+        }
+        
         Card n = new Card();
         n.setValue(userCard);
         n.setSuit(userSuit);
         
-        boolean cardFound = false;
+        
         for(Card card : magicHand){
             if(card.equals(n)){
                 cardFound = true;
