@@ -29,20 +29,21 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        Scanner input=new Scanner(System.in);
-        System.out.println("You can select the Card value from 1 to 13");
-        System.out.println("Enter the card value: ");
-        int cardValue=input.nextInt();
-        System.out.println("You can select the Suit from {Hearts, Clubs, Spades, Diamonds}");
-        System.out.println("Enter the Suit: ");
-        String suit=input.next();
-        Card c2=new Card();
-        c2.setValue(cardValue);
-        c2.setSuit(suit);
+//         Scanner input=new Scanner(System.in);
+//         System.out.println("You can select the Card value from 1 to 13");
+//         System.out.println("Enter the card value: ");
+//         int cardValue=input.nextInt();
+//         System.out.println("You can select the Suit from {Hearts, Clubs, Spades, Diamonds}");
+//         System.out.println("Enter the Suit: ");
+//         String suit=input.next();
+            Card luckyCard=new Card();
+            c2.setValue("Hearts");
+            c2.setSuit(1);
+        
         //Checking if the card matched the random Card object or not..
         String checkThis="N";
         for(int i=0;i<magicHand.length;i++){
-            if((magicHand[i].getValue()==c2.getValue())&&(magicHand[i].getSuit().equalsIgnoreCase(c2.getSuit()))){
+            if((magicHand[i].getValue()==luckyCard.getValue())&&(magicHand[i].getSuit().equalsIgnoreCase(luckyCard.getSuit()))){
                 System.out.println("Card Matched!");
                 checkThis="Y";
                 break;
