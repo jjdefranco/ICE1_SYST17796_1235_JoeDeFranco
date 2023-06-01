@@ -46,6 +46,10 @@ public class CardTrick {
         n.setValue(userCard);
         n.setSuit(userSuit);
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("Diamonds");
+        
         for(Card i: magicHand){
             System.out.println((i.getValue() == n.getValue()) && (i.getSuit().equals(n.getSuit())));
             if((i.getValue() == n.getValue()) && (i.getSuit().equals(n.getSuit()))){
