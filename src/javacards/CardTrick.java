@@ -24,6 +24,7 @@ public class CardTrick {
         int userCard;
         String userSuit;
         boolean cardFound = false;
+        boolean lucky = false;
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -51,9 +52,12 @@ public class CardTrick {
         luckyCard.setSuit("Diamonds");
         
         for(Card i: magicHand){
-            System.out.println((i.getValue() == n.getValue()) && (i.getSuit().equals(n.getSuit())));
             if((i.getValue() == n.getValue()) && (i.getSuit().equals(n.getSuit()))){
                 cardFound = true;
+                break;
+            }
+            if((i.getValue() == luckyCard.getValue()) && (i.getSuit().equals(luckyCard.getSuit()))){
+                lucky = true;
                 break;
             }
         }
@@ -62,6 +66,11 @@ public class CardTrick {
             System.out.println("Card was found");
         }else{
             System.out.println("Card was not found");
+        }
+        if(lucky == true){
+            System.out.println("Congratulations the lucky card was in your deck!");
+        }else{
+            System.out.println("Unfortunately the lucky card was not in your deck. Good luck next time!");
         }
     }
     
